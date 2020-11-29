@@ -34,6 +34,8 @@
     <a href="https://github.com/anuraghazra/github-readme-stats/issues/new/choose">Demander une nouveauté</a>
   </p>
   <p align="center">
+    <a href="/docs/readme_fr.md">Français</a>
+    ·
     <a href="/docs/readme_cn.md">简体中文</a>
     ·
     <a href="/docs/readme_es.md">Español</a>
@@ -44,7 +46,11 @@
     ·
     <a href="/docs/readme_pt-BR.md">Português Brasileiro</a>
     ·
+    <a href="/docs/readme_it.md">Italiano</a>
+    ·
     <a href="/docs/readme_kr.md">한국어</a>
+    .
+    <a href="/docs/readme_nl.md">Nederlands</a>
   </p>
 </p>
 <p align="center">Tu aimes ce projet? Penser <a href="https://www.paypal.me/anuraghazra">à faire un don</a> pour l'améliorer!
@@ -54,7 +60,7 @@
 - [Carte des stats GitHub](#carte-des-stats-github)
 - [GitHub Extra Pins](#github-extra-pins)
 - [Carte des meilleurs langages](#carte-des-langages-les--utilisés)
-- [Themes](#themes)
+- [Themes](#thèmes)
 - [Personnalisation](#personnalisation)
 - [Deployer toi-même](#déployer-sur-votre-propre-instance-vercel)
 
@@ -124,19 +130,21 @@ Vous pouvez personnaliser l'apparence de votre `Carte des stats` ou `Carte de r�
 
 #### Options principales:
 
--   `title_color` - Couleur du titre de la carte _(hex color)_
--   `text_color` - Couleur du texte _(hex color)_
--   `icon_color` - Couleur des icônes si disponibles _(hex color)_
--   `bg_color` - Couleur du fond de la carte _(hex color)_ **ou** un gradiant de la forme _angle,start,end_
--   `theme` - Nom du thème, parmis [tous les thèmes disponibles](./themes/README.md)
--   `cache_seconds` - Paramétrer le cache manuellement _(min: 1800, max: 86400)_
+- `title_color` - Couleur du titre de la carte _(hex color)_
+- `text_color` - Couleur du texte _(hex color)_
+- `icon_color` - Couleur des icônes si disponibles _(hex color)_
+- `bg_color` - Couleur du fond de la carte _(hex color)_ **ou** un gradiant de la forme _angle,start,end_
+- `hide_border` - Cache la bordure de la carte _(booléen)_
+- `theme` - Nom du thème, parmis [tous les thèmes disponibles](./themes/README.md)
+- `cache_seconds` - Paramétrer le cache manuellement _(min: 1800, max: 86400)_
+- `locale` - définir la langue de la carte _(par exemple. cn, de, es, etc.)_
 
 ##### Gradient in bg_color
 
 Vous pouvez fournir plusieurs valeurs (suivie d'une virgule) dans l'option bg_color pour rendre un degradé, le format du degradé est :-
 
 ```
-&bg_color=DEG,COLOR1,COLRO2,COLOR3...COLOR10
+&bg_color=DEG,COLOR1,COLOR2,COLOR3...COLOR10
 ```
 
 > Note relative: Les cartes répo ont un cache par défaut de 30 minutes (1800 secondes) si le nombre de bifurcations et d'étoiles est inférieur à 1K, alors il est de 2 heures (7200). Notez également que la mémoire cache est limitée à 30 minutes au minimum et à 24 heures au maximum.
@@ -146,6 +154,7 @@ Vous pouvez fournir plusieurs valeurs (suivie d'une virgule) dans l'option bg_co
 -   `hide` - Masquer les éléments spécifiés dans les statistiques _(Comma seperated values)_
 -   `hide_title` - Masquer le titre _(boolean)_
 -   `hide_rank` - Masquer le rang _(boolean)_
+-   `hide_border` - _(boolean)_
 -   `show_icons` - Afficher les icônes _(boolean)_
 -   `include_all_commits` - Compter le total de commits au lieu de ne compter que les commits de l'année en cours _(boolean)_
 -   `count_private` - Compter les commits privés _(boolean)_
@@ -159,6 +168,7 @@ Vous pouvez fournir plusieurs valeurs (suivie d'une virgule) dans l'option bg_co
 
 -   `hide` - Masquer les langages spécifiés sur la carte _(Comma seperated values)_
 -   `hide_title` - Masquer le titre _(boolean)_
+-   `hide_border` - _(boolean)_
 -   `layout` - Alterner entre 2 mise en page `default` & `compact`
 -   `card_width` - Fixer la largeur de la carte manuellement _(number)_
 
@@ -282,10 +292,10 @@ En général, vous ne pourrez pas mettre les images côte à côte. Pour ce fair
 
 ```md
 <a href="https://github.com/anuraghazra/github-readme-stats">
-  <img align="left" src="https://github-readme-stats.vercel.app/api/pin/?username=anuraghazra&repo=github-readme-stats" />
+  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=anuraghazra&repo=github-readme-stats" />
 </a>
 <a href="https://github.com/anuraghazra/convoychat">
-  <img align="left" src="https://github-readme-stats.vercel.app/api/pin/?username=anuraghazra&repo=convoychat" />
+  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=anuraghazra&repo=convoychat" />
 </a>
 ```
 
