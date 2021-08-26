@@ -14,7 +14,7 @@
   "devDependencies": {
     "@actions/core": "^1.2.4",
     "@actions/github": "^4.0.0",
-    "@testing-library/dom": "^7.20.0",
+    "@testing-library/dom": "^8.2.0",
     "@testing-library/jest-dom": "^5.11.0",
     "@uppercod/css-to-object": "^1.1.1",
     "axios": "^0.24.0",
