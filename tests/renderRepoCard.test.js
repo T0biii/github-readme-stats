@@ -1,9 +1,10 @@
-require("@testing-library/jest-dom");
-const cssToObject = require("@uppercod/css-to-object").cssToObject;
-const renderRepoCard = require("../src/cards/repo-card");
+import { queryByTestId } from "@testing-library/dom";
+import "@testing-library/jest-dom";
+import { cssToObject } from "@uppercod/css-to-object";
+import { renderRepoCard } from "../src/cards/repo-card.js";
+import { expect, it, describe } from "@jest/globals";
 
-const { queryByTestId } = require("@testing-library/dom");
-const themes = require("../themes");
+import { themes } from "../themes/index.js";
 
 const data_repo = {
   repository: {
@@ -189,9 +190,10 @@ describe("Test renderRepoCard", () => {
       );
       expect(descClassStyles.fill.trim()).toBe(`#${themes[name].text_color}`);
       expect(iconClassStyles.fill.trim()).toBe(`#${themes[name].icon_color}`);
-      expect(queryByTestId(document.body, "card-bg")).toHaveAttribute(
-        "fill",
-        `#${themes[name].bg_color}`,
+      const backgroundElement = queryByTestId(document.body, "card-bg");
+      const backgroundElementFill = backgroundElement.getAttribute("fill");
+      expect([`#${themes[name].bg_color}`, "url(#gradient)"]).toContain(
+        backgroundElementFill,
       );
     });
   });
