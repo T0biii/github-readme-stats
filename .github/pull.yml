@@ -2,5 +2,5 @@ version: "1"
 rules:
   - base: master
     upstream: anuraghazra:master
-    mergeMethod: rebase
+    mergeMethod: hardreset
     mergeUnstable: true
